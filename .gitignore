@@ -1,0 +1,5 @@
+# flask project ignores 
+__pycache__/
+venv
+
+
