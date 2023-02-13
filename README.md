@@ -10,4 +10,4 @@ In the following sub folders, you will find barebone projects using specific RES
 - spring-boot/ (Spring Boot Project)
 - node-js/ (NodeJS Express Project)
 - go-gin/ (Go-lang Gin Project)
-- dot-net-mvc (ASP.NET MVC Project)
+- asp-dot-net (ASP.NET MVC Project)
