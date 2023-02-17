@@ -1,0 +1,52 @@
+{
+    "transactions": [
+        {
+            "id": 1,
+            "transaction_id": "asdadkasdk",
+            "merchant": "A",
+            "mcc": "dasdhjsa",
+            "currency": "sajdhsja",
+            "amount": 1021.20,
+            "transaction_date": "sjkdhsda",
+            "card_id": "sajdhsajkd",
+            "card_pan": "safhsksa",
+            "card_type": "A"
+        },
+        {
+            "id": 2,
+            "transaction_id": "asdadkasdk",
+            "merchant": "A",
+            "mcc": "dasdhjsa",
+            "currency": "sajdhsja",
+            "amount": 203.20,
+            "transaction_date": "sjkdhsda",
+            "card_id": "sajdhsajkd",
+            "card_pan": "safhsksa",
+            "card_type": "B"
+        },
+        {
+            "id": 3,
+            "transaction_id": "asdadkasdk",
+            "merchant": "A",
+            "mcc": "dasdhjsa",
+            "currency": "sajdhsja",
+            "amount": 2208,
+            "transaction_date": "sjkdhsda",
+            "card_id": "sajdhsajkd",
+            "card_pan": "safhsksa",
+            "card_type": "C"
+        },
+        {
+            "id": 4,
+            "transaction_id": "asdadkasdk",
+            "merchant": "A",
+            "mcc": "dasdhjsa",
+            "currency": "sajdhsja",
+            "amount": 20321.20,
+            "transaction_date": "sjkdhsda",
+            "card_id": "sajdhsajkd",
+            "card_pan": "safhsksa",
+            "card_type": "D"
+        }
+    ]
+}
