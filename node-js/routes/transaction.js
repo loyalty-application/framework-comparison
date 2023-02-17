@@ -1,2 +1,5 @@
 const express = require('express')
-const 
+const {readTransactions} = require('../controllers/transactions')
+const inventoryRouter = express.Router()
+
+inventoryRouter.route('/').post(readTransactions)
