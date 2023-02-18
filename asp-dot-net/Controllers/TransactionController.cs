@@ -1,35 +1,44 @@
 ﻿using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
-using asp_dot_net.Models;
+using System.Linq;
 using System.Net;
+using System.Net.Http;
+using Newtonsoft.Json.Linq;
+using System.Web;
+using System.IO;
+using System.Numerics;
 
 namespace asp_dot_net.Controllers;
 
 [ApiController]
+[Route("/api")]
 public class TransactionController : ControllerBase
 
 {
-    [HttpPost("/transaction")]
-    public HttpResponseMessage createTransaction(HttpRequestMessage request)
+    [HttpPost]
+    [Route("/transactions")]
+    public IActionResult createTransactions([FromBody] JObject transaction)
     {
-        var output = request.Content.ReadFromJsonAsync<String, String>();
-
-        if (transactions == null)
+        try
         {
-            return new HttpResponseMessage(System.Net.HttpStatusCode.BadRequest);
-        }
-
-        double total = 0;
-        foreach (Transaction item in transactions)
-        {
-            if (item.merchant != null && item.merchant.Equals("A"))
+            double sum = 0;
+            JArray jArray = transaction["transactions"] as JArray;
+            foreach (JObject item in jArray)
             {
-                total += item.amount;
+                if (item["merchant"].ToString() == "A")
+                {
+                    string amt2 = item["amount"].ToString();
+                    double amt = Convert.ToDouble(item["amount"].ToString());
+                    sum += amt;
+                }
             }
 
+            return Ok(sum);
         }
-
-        return request.CreateResponse(HttpStatusCode.OK, )
+        catch (Exception e)
+        {
+            return BadRequest("Fail to calculate amount!");
+        }
     }
 
     [HttpGet("/")]
