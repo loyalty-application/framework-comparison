@@ -1,17 +1,12 @@
-﻿using System.Diagnostics;
-using Microsoft.AspNetCore.Mvc;
-using System.Linq;
-using System.Net;
-using System.Net.Http;
+﻿using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json.Linq;
-using System.Web;
-using System.IO;
-using System.Numerics;
+using Microsoft.Extensions.Hosting.Internal;
+using System.Formats.Asn1;
+using System.Diagnostics;
 
 namespace asp_dot_net.Controllers;
 
 [ApiController]
-[Route("/api")]
 public class TransactionController : ControllerBase
 
 {
@@ -39,6 +34,47 @@ public class TransactionController : ControllerBase
         {
             return BadRequest("Fail to calculate amount!");
         }
+    }
+
+    [HttpPost]
+    [Route("/transactions/file")]
+    [DisableRequestSizeLimit]
+    public async Task<IActionResult> createTransactionsWithFile(IFormFile file)
+    {
+        double sum = 0;
+
+        try
+        {
+            Console.WriteLine(file.ToString());
+            using var memoryStream = new MemoryStream(new byte[file.Length]);
+            await file.CopyToAsync(memoryStream);
+            memoryStream.Position = 0;
+
+            using (var fileStream = file.OpenReadStream())
+            using (var reader = new StreamReader(fileStream))
+            {
+                string row;
+                int x = 0;
+                while ((row = reader.ReadLine()) != null)
+                {
+                    if (x++ > 0)
+                    {
+                        string[] cols = row.Split(",");
+                        Console.WriteLine(cols[2]);
+                        if (cols[2] == "A")
+                        {
+                            double amt = Convert.ToDouble(cols[5].ToString());
+                            sum += amt;
+                        }
+                    }
+                }
+            }
+        }
+        catch
+        {
+            return BadRequest();
+        }
+        return Ok(sum);
     }
 
     [HttpGet("/")]
