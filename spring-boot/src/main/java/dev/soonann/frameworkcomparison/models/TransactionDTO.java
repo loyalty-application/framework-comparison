@@ -9,5 +9,5 @@ import lombok.*;
 @NoArgsConstructor
 public class TransactionDTO {
     
-    private List<RequestDTO> requests;
+    private List<RequestDTO> transactions;
 }

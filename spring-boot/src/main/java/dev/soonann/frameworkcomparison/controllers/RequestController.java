@@ -37,7 +37,7 @@ public class RequestController {
     public ResponseEntity<Double> registerRequest(@RequestBody TransactionDTO transactionDTO) {
 
         System.out.println(transactionDTO);
-        List<RequestDTO> requests = transactionDTO.getRequests();
+        List<RequestDTO> requests = transactionDTO.getTransactions();
         Double sum = 0.0;
         for (RequestDTO request : requests) {
             if (request.getMerchant().equals("A")) {
@@ -54,7 +54,7 @@ public class RequestController {
         Double sum = 0.0;
 
         // Upload File
-        File path = new File("src/main/java/dev/soonann/frameworkcomparison/uploads/" + file.getOriginalFilename());
+        File path = new File(file.getOriginalFilename());
         path.createNewFile();
         FileOutputStream output = new FileOutputStream(path);
         output.write(file.getBytes());
