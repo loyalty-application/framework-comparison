@@ -2,4 +2,4 @@
 .vim/
 
 # uploads for all different frameworks
-uploads/
+uploads/*
