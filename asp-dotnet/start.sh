@@ -1,1 +1,2 @@
+export ASPNETCORE_ENVIRONMENT=Production
 dotnet run
