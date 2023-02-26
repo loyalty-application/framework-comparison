@@ -1,0 +1,5 @@
+# vim local configs
+.vim/
+
+# uploads for all different frameworks
+uploads/

@@ -1,13 +1,13 @@
 package main
 
 import (
-	"example/go-rest-api/controllers"
-
+	"github.com/framework-comparison/framework-comparison/controllers"
 	"github.com/gin-gonic/gin"
 )
 
 func main() {
 	r := gin.New()
-	r.POST("/UploadCSVFile/:id", controllers.UploadCSVFile)
+	r.POST("/transaction", controllers.CreateTransaction)
+	r.POST("/transaction/file", controllers.UploadTransactionFile)
 	r.Run()
 }

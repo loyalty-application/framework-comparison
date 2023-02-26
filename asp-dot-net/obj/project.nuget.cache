@@ -1,8 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "+eBXJ5d9ThUAfP2O0AdQIxobEc8V4glkjcuX6p0xzJzUwe0x2/8IMBE+UeB140vE/kQjtogl2GEp4n0rPS1a4Q==",
+  "dgSpecHash": "Qhg93liLbt17CtaCXRYc6jKUIlL7R14F+XXrJQa79OWM8cKHFP0XzeXYjPEL/gssJzZq0bbgwW3a2p7f2Eyydg==",
   "success": true,
-  "projectFilePath": "/home/ann/development/smu-mods/cs301/framework-comparison/asp-dot-net/asp-dot-net.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\Franky\\Desktop\\Projects\\framework-comparison\\asp-dot-net\\asp-dot-net.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Franky\\.nuget\\packages\\microsoft.aspnetcore.jsonpatch\\7.0.3\\microsoft.aspnetcore.jsonpatch.7.0.3.nupkg.sha512",
+    "C:\\Users\\Franky\\.nuget\\packages\\microsoft.aspnetcore.mvc.newtonsoftjson\\7.0.3\\microsoft.aspnetcore.mvc.newtonsoftjson.7.0.3.nupkg.sha512",
+    "C:\\Users\\Franky\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
+    "C:\\Users\\Franky\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
+    "C:\\Users\\Franky\\.nuget\\packages\\newtonsoft.json.bson\\1.0.2\\newtonsoft.json.bson.1.0.2.nupkg.sha512"
+  ],
   "logs": []
 }
