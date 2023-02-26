@@ -36,7 +36,7 @@ public class RequestController {
     @PostMapping
     public ResponseEntity<Double> registerRequest(@RequestBody TransactionDTO transactionDTO) {
 
-        System.out.println(transactionDTO);
+        // System.out.println(transactionDTO);
         List<RequestDTO> requests = transactionDTO.getTransactions();
         Double sum = 0.0;
         for (RequestDTO request : requests) {
