@@ -11,7 +11,7 @@ public class TransactionController : ControllerBase
 
 {
     [HttpPost]
-    [Route("/transactions")]
+    [Route("/transaction")]
     public IActionResult createTransactions([FromBody] JObject transaction)
     {
         try
@@ -37,7 +37,7 @@ public class TransactionController : ControllerBase
     }
 
     [HttpPost]
-    [Route("/transactions/file")]
+    [Route("/transaction/file")]
     [DisableRequestSizeLimit]
     public async Task<IActionResult> createTransactionsWithFile(IFormFile file)
     {
