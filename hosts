@@ -1,0 +1,7 @@
+127.0.0.1   localhost localhost.localdomain localhost4 localhost4.localdomain4 
+::1         localhost6 localhost6.localdomain6 
+10.0.0.5    go-gin 
+10.0.0.6    node-js 
+10.0.0.7    asp-dotnet 
+10.0.0.8    flask 
+10.0.0.9    spring-boot 

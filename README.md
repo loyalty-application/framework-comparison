@@ -27,6 +27,7 @@ If you do not wish to use tmux, you can exit it with the command
 ```bash
 exit
 ```
+If you wish to, you can also use the host file provided in the root directory of this project, and fill up the hostname ip for all the instances
 
 ## Tmux (Getting Started)
 You do not need to use tmux if you don't want to.
