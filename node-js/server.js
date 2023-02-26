@@ -1,5 +1,4 @@
 const express = require('express');
-const fs = require('fs');
 const multer = require('multer');
 const csv = require('fast-csv');
 const app = express();
@@ -7,11 +6,6 @@ const PORT = 8080;
 
 app.use(express.json());
 const upload = multer({ dest: 'uploads/' });
-
-
-
-// const transaction = require("./routes/transaction");
-// app.use("/transaction", transaction)
 
 
 app.listen(PORT, (error) => {
@@ -33,8 +27,6 @@ app.post("/transaction", (req, res) => {
 
 app.post("/transaction/file", upload.single('file'), async (req, res) => {
     sum = 0
-    // open uploaded file
-    // starttime = Date.now()
     await csv.parseFile(req.file.path)
         .on("data", function (data) {
             if (data[2] == 'A') {
@@ -42,11 +34,6 @@ app.post("/transaction/file", upload.single('file'), async (req, res) => {
             }
         })
         .on("end", function () {
-            // fs.unlinkSync(req.file.path);   // remove temp file
-
-            //process "fileRows" and respond
-            // totaltime = Date.now() - starttime
             res.json({ sum });
-
         })
 })
