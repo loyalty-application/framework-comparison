@@ -18,7 +18,7 @@ In the following sub folders, you will find barebone projects using specific RES
 To setup an Amazon-Linux-AMI on EC2, you can run the following script to install the dependencies and clone the repository
 
 ```bash
-wget -O - https://raw.githubusercontent.com/framework-comparison/framework-comparison/main/aws-setup.sh | bash
+wget -O - https://raw.githubusercontent.com/loyalty-application/framework-comparison/main/aws-setup.sh | bash
 ```
 Note that after running this script, it will open up the repository in a `tmux` session.
 
